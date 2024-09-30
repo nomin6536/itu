@@ -3,109 +3,348 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <title>CV Design</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            line-height: 1.6;
+            background-color: #f8f3f9;
             margin: 0;
             padding: 0;
-            background-color: #f7f5f5;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 900px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            background-color:#fcc3c6; /* Baby pink */
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+
+        .header img {
+            border-radius: 10px;
+            width: 150px;
+            height: 170px;
+            margin-right: 20px;
+        }
+
+        .header-content {
+            color: #000; /* Black */
+        }
+
+        .header-content h1 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: bold;
+            color: #000;
+        }
+
+        .header-content h2 {
+            margin: 5px 0;
+            font-size: 18px;
             color: #333;
         }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            background: #ffffff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-            font-family: 'Verdana', sans-serif;
-			padding-left: 20px;
-        }
-		header, section{
-		    margin-left:20px;
-		}
-        header {
-            
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-        header img {
-            float: left;
-            width: 150px;
-            height: 230px;
-            margin-right: 30px;
-        }
-        header h1 {
-            text-align: center;
-            margin: 0;
-            color: #d85a6b;
 
+        .header-content p {
+            font-size: 14px;
+            color: #555;
         }
-        header p {
+
+        .profile-section {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .left-side, .right-side {
+            width: 45%;
+        }
+
+        .section-title {
+            font-size: 20px;
+            color: #000;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: black; 
+            margin-top: 5px;
+        }
+
+        .experience, .skills, .languages, .interests {
+            margin-bottom: 30px;
+        }
+
+
+        .skills, .languages, .interests {
+            background-color: #fcc3c6;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .experience-item {
+            margin-bottom: 15px;
+        }
+
+        .experience-item h4 {
+            margin: 0;
+            font-size: 16px;
+            color: #000;
+        }
+
+        .experience-item p {
+            font-size: 14px;
+            color: #555;
             margin: 5px 0;
         }
-        h2 {
-            color: #d85a6b;
-            border-bottom: 2px solid #f1c6c6;
-            padding-bottom: 5px;
-            margin-top: 20px;
-			margin-left: 20px;
-			margin-right: 20px;
+
+        /* Skills */
+        .skills-bar {
+            background-color: #ddd;
+            border-radius: 20px;
+            margin-bottom: 10px;
+            overflow: hidden;
+            height: 20px;
         }
-        .section {
-            margin-bottom: 20px;
+
+        .skills-bar span {
+            display: block;
+            height: 100%;
+            background-color: rgb(63, 62, 62); /* Black */
         }
+
+        .skills-bar span[data-skill="96"] {
+            width: 96%;
+        }
+
+        .skills-bar span[data-skill="92"] {
+            width: 92%;
+        }
+
+        .skills-bar span[data-skill="94"] {
+            width: 94%;
+        }
+
+        .skills-bar span[data-skill="84"] {
+            width: 84%;
+        }
+
+        /* Language Skills */
+        .language-bar {
+            background-color: #ddd;
+            border-radius: 20px;
+            margin-bottom: 10px;
+            overflow: hidden;
+            height: 20px;
+        }
+
+        .language-bar span {
+            display: block;
+            height: 100%;
+            background-color: rgb(63, 62, 62); /* Black */
+        }
+
+        .language-bar span[data-skill="95"] {
+            width: 95%;
+        }
+
+        .language-bar span[data-skill="90"] {
+            width: 90%;
+        }
+
+        /* Interests */
+        .interests ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .interests ul li {
+            background-color: #000; 
+            color: #ffa7ac; 
+            width: 70px;
+            height: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            font-size: 28px;
+            position: relative;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+
+        .interests ul li:hover {
+            background-color: #ffa7ac; /* Swap colors on hover */
+            color: #000; /* Black for the icon */
+            transform: translateY(-10px); /* Lift the icon on hover */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .interests ul li span {
+            display: block;
+            font-size: 14px;
+            position: absolute;
+            bottom: -30px;
+            color: #555;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .interests ul li:hover span {
+            opacity: 1;
+        }
+
+        /* Social Media Styles */
+        .social-media {
+            margin-top: 30px;
+        }
+
+        .social-media ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .social-media ul li {
+            display: inline-block;
+        }
+
+        .social-media img {
+            width: 40px;
+            height: 40px;
+            transition: transform 0.3s ease;
+        }
+
+        .social-media img:hover {
+            transform: scale(1.1); /* Scale up on hover */
+        }
+
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>cv</h1>
-            <img src="cvzurag1.jpg"/>
-            <div>
-                <p><strong>Овог нэр:</strong> Ариунбаатарын Номин<br>
-                <strong>Төрсөн он, сар, өдөр:</strong> 2004.05.19<br>
-                <strong>Хаяг байршил:</strong>Дорноговь Аймаг | Сайншанд хот, 3-р баг<br>
-                 <strong>ZIP:</strong>44109<br>
-                <strong>Gmail:</strong> 22b1num6536@.stud.num.edu.mn | Утас: 99973333</p>
-            </div>
-            <br><br><br>
-        </header>
 
-        <section class="section education">
-            <h2>Боловсрол</h2>
-            <p><strong>Боловсролын зэрэг:</strong> Бүрэн дунд боловсрол<br>
-                <strong>Эрхэлдэг ажил:</strong> Оюутан<br>
-                <strong>Түвшин:</strong> Бакалавр 3-р түвшний суралцагч<br>
-                <strong>Их сургууль:</strong> Монгол Улсын Их Сургууль, Улаанбаатар хот<br>
-                <strong>Салбар сургууль:</strong> Мэдээллийн технологи электроникийн сургууль<br>
-                <strong>Сурч буй хөтөлбөр:</strong> Мэдээллийн систем<br>
-                <strong>ID:</strong> 22B1NUM6536<br>
-                <strong>Элссэн он сар:</strong> 2022 оны 7 сар</p>
-            
-        </section>
-
-        <section class="section experience">
-            <h2>Туршлага</h2>
-            <p>Тодорхой компани болон байгууллагад ажилласан туршлага одоогоор байхгүй.</p>
-        </section>
-
-        <section class="section skills">
-            <h2>Ур чадвар</h2>
-            <ul>
-                <li>Практик дээр ажиллах</li>
-                <li>Баг хамт олонтой ажиллах</li>
-                <li>Англи хэлний түвшин c1</li>
-                <li>Нягт нямбай, бүтээлч сэтгэлгээтэй</li>
-            </ul>
-        </section>
+<div class="container">
+    <!-- Header Section -->
+    <div class="header">
+        <img src="zuragpro.jpg" alt="Номин Ариунбаатар">
+        <div class="header-content">
+            <h1>Номин Ариунбаатар</h1>
+            <h2>Оюутан</h2>
+            <p>Монгол улсын их сургуульд мэдээллийн систем хөтөлбөрт суралцдаг.</p>
+        </div>
     </div>
-    <nav>
-    <a href="cv.html">cv</a>
-    </nav>
+
+    <!-- Profile and Experience Section -->
+    <div class="profile-section">
+        <!-- Left Side: Profile Academic and Skills -->
+        <div class="left-side">
+            <div class="Боловсролын түвшин">
+                <div class="section-title">Боловсролын түвшин</div>
+                <p>Бүрэн дунд боловсрол<br><br>
+                МУИС-д 3-р түвшний суралцагч</p>
+            </div>
+<br><br>
+            <div class="skills">
+                <div class="section-title">Ур чадвар</div>
+
+                <p>Ярианы чадвар</p>
+                <div class="skills-bar"><span data-skill="96"></span></div>
+
+                <p>Гүйцэтгэлийн чадвар</p>
+                <div class="skills-bar"><span data-skill="92"></span></div>
+
+                <p>Ачаалал даах чадвар</p>
+                <div class="skills-bar"><span data-skill="94"></span></div>
+
+                <p>Цагийн менежмент</p>
+                <div class="skills-bar"><span data-skill="84"></span></div>
+            </div>
+        </div>
+
+        <!-- Right Side: Work Experience and Language Skills -->
+        <div class="right-side">
+            <div class="experience">
+                <div class="section-title">Ажлын туршлага</div>
+
+                <div class="experience-item">
+                    <h4>Micheal and Amazonka</h4>
+                    <p>2019 - 2020</p>
+                    <p>Борлуулалтын менежерийн туслахаар дадлага хийсэн.</p>
+                </div>
+
+                <div class="experience-item">
+                    <h4>Kidult</h4>
+                    <p>2020 - 2021</p>
+                    <p>Загвар зохион бүтээгчээр 1 жил ажилласан.</p>
+                </div>
+                <div class="experience-item">
+                    <h4>The blu</h4>
+                    <p>2021- 2022</p>
+                    <p>Төслийн менежерийн туслахаар 2 жил дадлагажсан.</p>
+                </div>
+            </div>
+
+            <div class="languages">
+                <div class="section-title">Хэлний чадвар</div>
+
+                <p>korean</p>
+                <div class="language-bar"><span data-skill="95"></span></div>
+
+                <p>English</p>
+                <div class="language-bar"><span data-skill="90"></span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Interests Section -->
+    <div class="interests">
+        <div class="section-title">Сонирхол</div>
+        <ul>
+            <li>🌍<span>Аялал</span></li>
+            <li>🎵<span>Дуу</span></li>
+            <li>🎨<span>Зурах</span></li>
+            <li>📚<span>Унших</span></li>
+            <li>📸<span>Зураг </span></li>
+        </ul>
+    </div>
+
+    <!-- Social Media Links Section -->
+    <div class="social-media">
+        <div class="section-title">Холбоос</div>
+        <ul>
+            <li>
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="ig.png" alt="Instagram">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="fb.png" alt="Facebook">
+                </a>
+            </li>
+        </ul>
+    </div>
+
+</div>
+
 </body>
 </html>
-
 
