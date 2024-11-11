@@ -3,347 +3,522 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV Design</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f8f3f9;
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            width: 80%;
-            max-width: 900px;
-            margin: 20px auto;
-            background-color: #ffffff;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-        }
-
-        .header {
-            display: flex;
-            align-items: center;
-            background-color:#fcc3c6; /* Baby pink */
-            padding: 20px;
-            border-radius: 8px;
-        }
-
-
-        .header img {
-            border-radius: 10px;
-            width: 150px;
-            height: 170px;
-            margin-right: 20px;
-        }
-
-        .header-content {
-            color: #000; /* Black */
-        }
-
-        .header-content h1 {
-            margin: 0;
-            font-size: 28px;
-            font-weight: bold;
-            color: #000;
-        }
-
-        .header-content h2 {
-            margin: 5px 0;
-            font-size: 18px;
-            color: #333;
-        }
-
-        .header-content p {
-            font-size: 14px;
-            color: #555;
-        }
-
-        .profile-section {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 30px;
-        }
-
-        .left-side, .right-side {
-            width: 45%;
-        }
-
-        .section-title {
-            font-size: 20px;
-            color: #000;
-            margin-bottom: 10px;
-            font-weight: bold;
-        }
-
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 50px;
-            height: 3px;
-            background-color: black; 
-            margin-top: 5px;
-        }
-
-        .experience, .skills, .languages, .interests {
-            margin-bottom: 30px;
-        }
-
-
-        .skills, .languages, .interests {
-            background-color: #fcc3c6;
-            padding: 20px;
-            border-radius: 8px;
-        }
-
-        .experience-item {
-            margin-bottom: 15px;
-        }
-
-        .experience-item h4 {
-            margin: 0;
-            font-size: 16px;
-            color: #000;
-        }
-
-        .experience-item p {
-            font-size: 14px;
-            color: #555;
-            margin: 5px 0;
-        }
-
-        /* Skills */
-        .skills-bar {
-            background-color: #ddd;
-            border-radius: 20px;
-            margin-bottom: 10px;
-            overflow: hidden;
-            height: 20px;
-        }
-
-        .skills-bar span {
-            display: block;
-            height: 100%;
-            background-color: rgb(63, 62, 62); /* Black */
-        }
-
-        .skills-bar span[data-skill="96"] {
-            width: 96%;
-        }
-
-        .skills-bar span[data-skill="92"] {
-            width: 92%;
-        }
-
-        .skills-bar span[data-skill="94"] {
-            width: 94%;
-        }
-
-        .skills-bar span[data-skill="84"] {
-            width: 84%;
-        }
-
-        /* Language Skills */
-        .language-bar {
-            background-color: #ddd;
-            border-radius: 20px;
-            margin-bottom: 10px;
-            overflow: hidden;
-            height: 20px;
-        }
-
-        .language-bar span {
-            display: block;
-            height: 100%;
-            background-color: rgb(63, 62, 62); /* Black */
-        }
-
-        .language-bar span[data-skill="95"] {
-            width: 95%;
-        }
-
-        .language-bar span[data-skill="90"] {
-            width: 90%;
-        }
-
-        /* Interests */
-        .interests ul {
-            list-style-type: none;
-            padding: 0;
-            display: flex;
-            justify-content: space-around;
-        }
-
-        .interests ul li {
-            background-color: #000; 
-            color: #ffa7ac; 
-            width: 70px;
-            height: 70px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 50%;
-            font-size: 28px;
-            position: relative;
-            transition: all 0.3s ease-in-out;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            cursor: pointer;
-        }
-
-        .interests ul li:hover {
-            background-color: #ffa7ac; /* Swap colors on hover */
-            color: #000; /* Black for the icon */
-            transform: translateY(-10px); /* Lift the icon on hover */
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        .interests ul li span {
-            display: block;
-            font-size: 14px;
-            position: absolute;
-            bottom: -30px;
-            color: #555;
-            opacity: 0;
-            transition: opacity 0.3s ease-in-out;
-        }
-
-        .interests ul li:hover span {
-            opacity: 1;
-        }
-
-        /* Social Media Styles */
-        .social-media {
-            margin-top: 30px;
-        }
-
-        .social-media ul {
-            list-style-type: none;
-            padding: 0;
-            display: flex;
-            justify-content: space-around;
-        }
-
-        .social-media ul li {
-            display: inline-block;
-        }
-
-        .social-media img {
-            width: 40px;
-            height: 40px;
-            transition: transform 0.3s ease;
-        }
-
-        .social-media img:hover {
-            transform: scale(1.1); /* Scale up on hover */
-        }
-
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <title>Swarovski-Inspired Design</title>
+   
 </head>
 <body>
 
-<div class="container">
-    <!-- Header Section -->
-    <div class="header">
-        <img src="zuragpro.jpg" alt="Номин Ариунбаатар">
-        <div class="header-content">
-            <h1>Номин Ариунбаатар</h1>
-            <h2>Оюутан</h2>
-            <p>Монгол улсын их сургуульд мэдээллийн систем хөтөлбөрт суралцдаг.</p>
+    <!-- Header and Navbar -->
+<header>
+    <!-- Background Video -->
+    <video class="background-video" autoplay loop muted playsinline>
+        <source src="swarovski.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Top Bar with Icons -->
+    <div class="top-bar">
+        <div>
+            <a href="#stores"><span>📍</span> Stores</a>
+        </div>
+        <div>
+            <a href="#login">Login</a>
+            <a href="#cart">🛒 0</a>
         </div>
     </div>
 
-    <!-- Profile and Experience Section -->
-    <div class="profile-section">
-        <!-- Left Side: Profile Academic and Skills -->
-        <div class="left-side">
-            <div class="Боловсролын түвшин">
-                <div class="section-title">Боловсролын түвшин</div>
-                <p>Бүрэн дунд боловсрол<br><br>
-                МУИС-д 3-р түвшний суралцагч</p>
+    <!-- Logo -->
+    <div class="logo">SWAROVSKI</div>
+
+<!-- Navigation Bar -->
+
+<nav class="navbar">
+    <div class="dropdown">
+        <a href="#newin">New In</a>
+    </div>
+    <div class="dropdown">
+        <a href="#jewelry">Jewelry</a>
+        <div class="dropdown-content">
+            <div class="column">
+                <h5>Necklaces and Pendants</h5>
+                <ul>
+                    <li><a href="#necklaces">Necklaces</a></li>
+                    <li><a href="#pendants">Pendants</a></li>
+                    <li><a href="#chokers">Chokers</a></li>
+                    <li><a href="#tennis-necklaces">Tennis Necklaces</a></li><br>
+                </ul>
+                <h5>Bracelets</h5>
+                <ul>
+                    <li><a href="#chain-bracelets">Chain Bracelets</a></li>
+                    <li><a href="#adjustable-bracelets">Adjustable Bracelets</a></li>
+                    <li><a href="#tennis-bracelets">Tennis Bracelets</a></li>
+                    <li><a href="#bangles">Bangles and Cuffs</a></li>
+                </ul>
             </div>
-<br><br>
-            <div class="skills">
-                <div class="section-title">Ур чадвар</div>
 
-                <p>Ярианы чадвар</p>
-                <div class="skills-bar"><span data-skill="96"></span></div>
-
-                <p>Гүйцэтгэлийн чадвар</p>
-                <div class="skills-bar"><span data-skill="92"></span></div>
-
-                <p>Ачаалал даах чадвар</p>
-                <div class="skills-bar"><span data-skill="94"></span></div>
-
-                <p>Цагийн менежмент</p>
-                <div class="skills-bar"><span data-skill="84"></span></div>
+            <div class="column">
+                <h5>Earrings</h5>
+                <ul>
+                    <li><a href="#stud-earrings">Stud Earrings</a></li>
+                    <li><a href="#drop-earrings">Drop Earrings</a></li>
+                    <li><a href="#hoop-earrings">Hoop Earrings</a></li>
+                    <li><a href="#clip-earrings">Clip Earrings</a></li>
+                    <li><a href="#ear-cuffs">Ear Cuffs</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3>Rings</h3>
+                <ul>
+                    <li><a href="#halo-rings">Halo Rings</a></li>
+                    <li><a href="#band-rings">Band Rings</a></li>
+                    <li><a href="#cocktail-rings">Cocktail Rings</a></li>
+                    <li><a href="#motif-rings">Motif Rings</a></li>
+                    <li><a href="#adjustable-rings">Adjustable Rings</a></li>
+                    <li><a href="#stackable-rings">Stackable Rings</a></li><br>
+                </ul>
+                <h5>Sets</h5><br>
+                <h5>Brooches</h5><br>
+                <h5>Extenders</h5>
+            </div>
+            <div class="column">
+                <h5>Shop by collection</h5>
+                <ul>
+                    <li><a href="#stud-earrings">Millenia</a></li>
+                    <li><a href="#drop-earrings">Matrix</a></li>
+                    <li><a href="#hoop-earrings">Hyperbola</a></li>
+                    <li><a href="#clip-earrings">Idyllia</a></li>
+                    <li><a href="#ear-cuffs">Dextera</a></li>
+                    <li><a href="#ear-cuffs">Una Angelic</a></li>
+                    <li><a href="#ear-cuffs">Birthstones</a></li><br>
+                </ul>
+                <h5>Our Picks</h5>
+                <ul>
+                    <li><a href="#stud-earrings">Style Stories</a></li>
+                    <li><a href="#drop-earrings">How to care for your jewelry</a></li>
+                </ul>
             </div>
         </div>
-
-        <!-- Right Side: Work Experience and Language Skills -->
-        <div class="right-side">
-            <div class="experience">
-                <div class="section-title">Ажлын туршлага</div>
-
-                <div class="experience-item">
-                    <h4>Micheal and Amazonka</h4>
-                    <p>2019 - 2020</p>
-                    <p>Борлуулалтын менежерийн туслахаар дадлага хийсэн.</p>
-                </div>
-
-                <div class="experience-item">
-                    <h4>Kidult</h4>
-                    <p>2020 - 2021</p>
-                    <p>Загвар зохион бүтээгчээр 1 жил ажилласан.</p>
-                </div>
-                <div class="experience-item">
-                    <h4>The blu</h4>
-                    <p>2021- 2022</p>
-                    <p>Төслийн менежерийн туслахаар 2 жил дадлагажсан.</p>
-                </div>
+    </div>
+    
+    <div class="dropdown">
+        <a href="#Watches">Watches</a>
+        <div class="dropdown-content">
+            <div class="column">
+                <h5>Shop by material</h5>
+                <ul>
+                    <li><a href="#necklaces">Champagne gold-tone</a></li>
+                    <li><a href="#pendants">Gold-tone watches</a></li>
+                    <li><a href="#chokers">Rose gold-tone watches</a></li>
+                    <li><a href="#tennis-necklaces">Stainless steel watches</a></li>
+                    <li><a href="#tennis-necklaces">Metal bracelet</a></li>
+                    <li><a href="#tennis-necklaces">Leather strap watches</a></li>
+                </ul>
             </div>
 
-            <div class="languages">
-                <div class="section-title">Хэлний чадвар</div>
+            <div class="column">
+                <h5>Shop by color</h5>
+                <ul>
+                    <li><a href="#stud-earrings">Blue watches</a></li>
+                    <li><a href="#drop-earrings">Black watches</a></li>
+                    <li><a href="#hoop-earrings">Gray watches</a></li>
+                    <li><a href="#clip-earrings">Pink watches</a></li>
+                    <li><a href="#ear-cuffs">Red watches</a></li>
+                    <li><a href="#ear-cuffs">White watches</a></li>
+                    <li><a href="#ear-cuffs">Green watches</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h5>Shop by collection</h5>
+                <ul>
+                    <li><a href="#halo-rings">Matrix Bangle</a></li>
+                    <li><a href="#band-rings">Dextera Bangle</a></li>
+                    <li><a href="#cocktail-rings">Octea Chrono</a></li>
+                    <li><a href="#motif-rings">Certa</a></li>
+                    <li><a href="#adjustable-rings">Illumina</a></li>
+                    <li><a href="#stackable-rings">Cosmopitan</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="dropdown">
+        <a href="#Watches">Accessories</a>
+        <div class="dropdown-content">
+            <div class="column">
+                <h5>Pens</h5><br>
+                <h5>Smartphone cases</h5>
+            </div>
 
-                <p>korean</p>
-                <div class="language-bar"><span data-skill="95"></span></div>
-
-                <p>English</p>
-                <div class="language-bar"><span data-skill="90"></span></div>
+            <div class="column">
+                <h5>Key rings</h5><br>
+                <h5>Hair accessories</h5>
+            </div>
+            <div class="column">
+                <h5>Handbags</h5><br>
+                <h5>Body jewelry</h5>
+            </div>
+            <div class="column">
+                <h5>Shop by smartphone</h5>
+                <ul>
+                   <li><a href="#accessories1">i phone 15</a></li> 
+                    <li><a href="#accessories2">i phone 15 Pro</a></li>
+                    <li><a href="#accessories3">i phone 15 Pro Max</a></li>
+                    <li><a href="#accessories1">i phone 14</a></li>
+                    <li><a href="#accessories2">i phone 14 Pro</a></li><li>
+                    <li><a href="#accessories3">i phone 14 Pro Max</a></li>
+                </ul>
             </div>
         </div>
     </div>
 
-    <!-- Interests Section -->
-    <div class="interests">
-        <div class="section-title">Сонирхол</div>
-        <ul>
-            <li>🌍<span>Аялал</span></li>
-            <li>🎵<span>Дуу</span></li>
-            <li>🎨<span>Зурах</span></li>
-            <li>📚<span>Унших</span></li>
-            <li>📸<span>Зураг </span></li>
-        </ul>
+    <div class="dropdown">
+        <a href="#Watches">Decorations</a>
+        <div class="dropdown-content">
+            <div class="column">
+                <h5>Collaborations</h5>
+                <ul>
+                    <li><a href="#necklaces">Marvel</a></li>
+                    <li><a href="#pendants">Disney</a></li>
+                    <li><a href="#chokers">Warner Bros.</a></li>
+                    <li><a href="#tennis-necklaces">DreamWorks</a></li>
+                </ul>
+                <h5>Nature inspired</h5>
+                <ul>
+                    <li><a href="#necklaces">Flowers</a></li>
+                    <li><a href="#pendants">Birds</a></li>
+                    <li><a href="#chokers">Wildlife</a></li>
+                    <li><a href="#tennis-necklaces">Dogs and cats</a></li>
+                    <li><a href="#tennis-necklaces">Other animals</a></li>
+                </ul>  
+            </div>
+
+            <div class="column">
+                <h5>Home decor</h5>
+                <ul>
+                    <li><a href="#stud-earrings">Glasses and Tableware</a></li>
+                    <li><a href="#drop-earrings">Candleholders and tealights</a></li>
+                    <li><a href="#hoop-earrings">Picture frames</a></li>
+                    <li><a href="#clip-earrings">Decorative accessories</a></li>
+                    <li><a href="#ear-cuffs">Stands and holders</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h5>Chritmas</h5>
+                <ul>
+                    <li><a href="#halo-rings">Hanging ornaments</a></li>
+                    <li><a href="#band-rings">Chritmas characters</a></li>
+                </ul>
+                <h5>Figurines</h5>
+                <ul>
+                    <li><a href="#halo-rings">Kris bears</a></li>
+                    <li><a href="#band-rings">Zodiac</a></li>
+                    <li><a href="#band-rings">Other characters</a></li>
+                </ul>
+                <h5>Asian symbols</h5>
+                <ul>
+                    <li><a href="#halo-rings">Chinese zodiac</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="dropdown">
+        <a href="#Watches">Gifts</a>
+        <div class="dropdown-content">
+            <div class="column">
+                <h5>Gift Ideas</h5>
+                <ul>
+                    <li><a href="#necklaces">Bestselling gifts</a></li>
+                    <li><a href="#pendants">Rimantic gifts</a></li>
+                    <li><a href="#chokers">Precious gifts</a></li>
+                    <li><a href="#tennis-necklaces">Gifts for the home</a></li>
+                </ul>
+            </div>
+
+            <div class="column">
+                <h5>Recipients</h5>
+                <ul>
+                    <li><a href="#stud-earrings">Gifts for her</a></li>
+                    <li><a href="#drop-earrings">Gifts for him</a></li>
+                    <li><a href="#hoop-earrings">Gifts for new parents</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h5>Occasions</h5>
+                <ul>
+                    <li><a href="#halo-rings">Holiday gifts</a></li>
+                    <li><a href="#band-rings">Birthday gifts</a></li>
+                    <li><a href="#cocktail-rings">Graduation gifts</a></li>
+                    <li><a href="#motif-rings">Wedding gifts</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h5>Gift card</h5>
+                <h5>Services</h5>
+                <ul>
+                    <li><a href="#halo-rings">Personal Gift Finder</a></li>
+                    <li><a href="#band-rings">Corporate gifts</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
 
-    <!-- Social Media Links Section -->
-    <div class="social-media">
-        <div class="section-title">Холбоос</div>
-        <ul>
-            <li>
-                <a href="https://www.instagram.com" target="_blank">
-                    <img src="ig.png" alt="Instagram">
-                </a>
-            </li>
-            <li>
-                <a href="https://www.facebook.com" target="_blank">
-                    <img src="fb.png" alt="Facebook">
-                </a>
-            </li>
-        </ul>
+
+
+    <div class="dropdown">
+        <a href="#worldof">World of Swarovski</a>
+        <div class="dropdown-content">
+            <div class="column">
+                <h5>Spotlight</h5>
+                <ul>
+                    <li><a href="#halo-rings">Swarovski Brand Ambassador</a></li>
+                    <li><a href="#band-rings">Build-A-Bear</a></li>
+                    <li><a href="#halo-rings">Master of Light-From Vienna to Seoul</a></li>
+                    <li><a href="#band-rings">Swarovski Crystal Pearls</a></li>
+                    <li><a href="#halo-rings">Met Gala 2024</a></li>
+                    <li><a href="#band-rings">On the Red Carpet</a></li>
+                    <li><a href="#band-rings">BMW meets Swarovski</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h5>Style Stories</h5>
+                <ul>
+                    <li><a href="#halo-rings">Styling Holiday Jewelry</a></li>
+                    <li><a href="#band-rings">Holiday Home Decor</a></li>
+                    <li><a href="#halo-rings">2024 Look Book</a></li>
+                    <li><a href="#band-rings">How to Wear Pearls Every Day</a></li>
+                    <li><a href="#halo-rings">Disney's The Lion King</a></li>
+                    <li><a href="#band-rings">Wedding & Engagement</a></li>
+                    <li><a href="#band-rings">A Guide to Watch Styles</a></li>
+                    <li><a href="#band-rings">Zodiac Accessories</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h5>Inside Swarovski</h5>
+                <ul>
+                    <li><a href="#halo-rings">About Swarovski</a></li>
+                    <li><a href="#band-rings">Sustainability</a></li>
+                    <li><a href="#halo-rings">Swarovski Kristallwelten</a></li>
+                    <li><a href="#band-rings">Swarovski Mobility</a></li>
+                    <li><a href="#halo-rings">Corporate Gifts</a></li>
+                    <li><a href="#band-rings">Jobs & Career</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h5>For Professionals</h5><br>
+                <h5>Our Picks</h5>
+                <ul>
+                    <li><a href="#halo-rings">New Store Concept</a></li>
+                    <li><a href="#band-rings">Wear it, Share it</a></li>
+                    <li><a href="#halo-rings">Care & Maintenance</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
 
-</div>
+</nav>
+    <!-- Hero Section Content -->
+    <div class="hero-content">
+        <h1>Go with the Flow</h1>
+        <p>Embrace the unexpected</p>
+        <div class="hero-buttons">
+            <button1>Discover more</button1>
+            <button>Read more</button>
+        </div>
+    </div>
+</header>
+
+<!-- Feature Section -->
+<section class="feature-section">
+    <div class="feature-content">
+        <h2>Masters of Light Since 1895</h2>
+        <p>Since 1895, founder Daniel Swarovski’s passion for innovation and design, and mastery of crystal cutting has defined Swarovski as the leading jewelry and accessories brand.</p>
+        <div class="feature-buttons">
+
+        </div>
+    </div>
+</section>
+<section class="video-section" style="text-align: center; padding: 40px 20px;">
+    <h2>You’re Invited...</h2>
+    <video width="70%" controls>
+        <source src="invited.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</section>
+
+<!-- Product Introduction Section -->
+<section class="product-introduction" style="padding: 40px 20px; background-color: #ffffff;">
+    <h2 style="text-align: center; font-size:40px; font-family: 'Times New Roman', Times, serif;">Make Waves</h2>
+    <div class="product-container" style="display: flex; justify-content: space-around; flex-wrap: wrap; max-width: 1200px; margin: auto;">
+        <div class="product-card" style="flex: 1 1 300px; margin: 20px; padding: 20px; ">
+            <img src="1.png" alt="Product 1" style="width: 100%; height: auto; ">
+            <h3>Luminous Necklaces</h3><br>
+            <p>Enter the icon. Embrace the radiant power of Millenia, where rivers of octagon-cut crystals reflect our mastery of light. Stack clear chokers across to highlight your collarbones for a look guaranteed to attract attention.</p>
+        </div>
+        
+        <div class="product-card" style="flex: 1 1 300px; margin: 20px; padding: 20px;">
+            <video width="100%" controls style="border-radius: 0px;">
+                <source src="2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <h3>Statement Bracelets</h3><br>
+            <p>Wrap your wrists in waves of clear crystals. Fluid forms that take notes from nature offer a dynamic contrast to sculptural shapes domed to catch the light from every angle. Style against a monochrome sleeve - the definition of modern elegance.</p>
+        </div>
+        
+        <div class="product-card" style="flex: 1 1 300px; margin: 20px; padding: 20px; ">
+            <img src="3.png" alt="Product 3" style="width: 100%; height: auto; ">
+            <h3>Striking Earrings</h3><br>
+            <p>Designed for impact, Sublima’s full volume earrings shine with a pavé of crystals set in our distinctive Meteora pattern. Make them the focal piece of your look, or add curved ear cuffs for an incomparable shimmer.</p>
+        </div>
+    </div>
+</section>
+
+<!-- New In Section -->
+<section class="new-in-section" style="padding: 40px 20px; background-color: #eff0e5; text-align: center;">
+    <h2>New In</h2>
+    <div class="new-in-container" style="display: flex; justify-content: space-around; flex-wrap: wrap; max-width: 1200px; margin: auto;">
+        <div class="new-in-card" style="flex: 1 1 220px; margin: 20px; position: relative; overflow: hidden; ">
+            <img src="4.png" alt="New Product 1" style="width: 100%; height: auto; transition: transform 0.3s;">
+        </div>
+        <div class="new-in-card" style="flex: 1 1 220px; margin: 20px; position: relative; overflow: hidden; ">
+            <img src="5.png" alt="New Product 2" style="width: 100%; height: auto; transition: transform 0.3s;">
+        </div>
+        <div class="new-in-card" style="flex: 1 1 220px; margin: 20px; position: relative; overflow: hidden; ">
+            <img src="6.png" alt="New Product 3" style="width: 100%; height: auto; transition: transform 0.3s;">
+        </div>
+        <div class="new-in-card" style="flex: 1 1 220px; margin: 20px; position: relative; overflow: hidden;">
+            <img src="7.png" alt="New Product 4" style="width: 100%; height: auto; transition: transform 0.3s;">
+        </div>
+    </div>
+</section>
+
+<section id="text-video-section">
+    <div class="text-side">
+        <h3>Crystal Living</h3><br>
+        <p>Transform your space with a touch of light-filled luxury. Crated with Swarovski’s signature savoir-faire, the collection of hanging ornaments and figurines combines precision-cut crystals with thoughtful metal adornments. A charming addition to your décor, for holiday season and beyond.</p>
+    </div>
+    <div class="video-block">
+        <video src="bichleg.mp4" controls></video>
+    </div>
+</section>
+<section class="text-picture-section1">
+    <div class="container">
+        <div class="image-side">
+            <img src="15.png" alt="Description of Image">
+        </div>
+        <div class="text-side">
+            <h2>Millenia</h2><br>
+            <p>
+                Dive into a river of crystals and honor the fluidity of fashion with styles that are timeless yet made for the moment. Illuminated with brilliant blue tones, each piece radiates cool confidence. Whether worn solo or stacked, Millenia has an eternal allure.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="shop-by-category">
+    <h2 class="category-title">Shop by Category</h2>
+    <div class="categories">
+        <div class="category">
+            <img src="11.png" alt="Jewelry">
+            <p>Jewelry</p>
+        </div>
+        <div class="category">
+            <img src="12.png" alt="Watches">
+            <p>Watches</p>
+        </div>
+        <div class="category">
+            <img src="13.png" alt="Decorations">
+            <p>Decorations</p>
+        </div>
+        <div class="category">
+            <img src="14.png" alt="Accessories">
+            <p>Accessories</p>
+        </div>
+    </div>
+</section>
+
+
+<section class="World of Swarovski" style="padding: 40px 20px; background-color: #ffffff;">
+    <h2 style="text-align: center; font-size:40px; font-family: 'Times New Roman', Times, serif;">World of Swarovski</h2>
+    <div class="product-container" style="display: flex; justify-content: space-around; flex-wrap: wrap; max-width: 1200px; margin: auto;">
+        <div class="product-card" style="flex: 1 1 300px; margin: 20px; padding: 20px; ">
+            <img src="8.png" alt="Product 1" style="width: 100%; height: auto; ">
+            <h3>Luminous Necklaces</h3><br>
+            <p>Enter the icon. Embrace the radiant power of Millenia, where rivers of octagon-cut crystals reflect our mastery of light. Stack clear chokers across to highlight your collarbones for a look guaranteed to attract attention.</p>
+        </div>
+        
+        <div class="product-card" style="flex: 1 1 300px; margin: 20px; padding: 20px;">
+                <img src="9.png" alt="Product 2" style="width: 100%; height: auto; ">
+            <h3>Matrix</h3><br>
+            <p>Discover the Matrix collection’s elegance with Swarovski US, where classic cuts, vibrant colors, and Tennis styles meet for fashionable stacking and layering. </p>
+        </div>
+        
+        <div class="product-card" style="flex: 1 1 300px; margin: 20px; padding: 20px; ">
+            <img src="10.png" alt="Product 3" style="width: 100%; height: auto; ">
+            <h3>Masters of Light</h3><br>
+            <p>Experience a retrospective celebration of Swarovski's innovative spirit at the immersive Masters of Light exhibition. Discover exceptional craftsmanship, creative wonders, and the evolution of Swarovski's artistry at the stunning Palazzo Citterio in Milan. </p>
+        </div>
+    </div>
+</section>
+
+<section id="new-settler" style="text-align: center; padding: 100px; height: 350px;">
+    <h2>Newsletter</h2>
+    <p>Subscribe to the Newsletter and stay up-to-date</p>
+    <input type="email" id="email-input" placeholder="Enter your email" required>
+    <button id="join-button">Join the Club</button>
+</section>
+
+
+<footer>
+    <div class="footer-top">
+        <div class="footer-column">
+            <h3>CUSTOMER SERVICE & FAQ</h3>
+            <ul>
+                <li><a href="#">Customer Service Overview</a></li>
+                <li><a href="#shipping">Gift Card Balance</a></li>
+                <li><a href="#size">Size Guide</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#">Store Finder</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>ABOUT US</h3>
+            <ul>
+                <li><a href="#">About Swarovski</a></li>
+                <li><a href="#">Sustainability</a></li>
+                <li><a href="#">Jobs & Career</a></li>
+                <li><a href="#">Alumni Community</a></li>
+                <li><a href="#">Corporate Gifts</a></li>
+                <li><a href="#">For Professionals</a></li>
+                <li><a href="#">Sitemap</a></li>
+                <li><a href="#">Kristallwelten</a></li>
+                <li><a href="#">Swarovski Mobility</a></li>
+                <li><a href="#">Code of Conduct</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>LEGAL</h3>
+            <ul>
+                <li><a href="#">Terms Of Use</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Cookie Consent</a></li>
+                <li><a href="#">Imprint</a></li>
+                <li><a href="#">REACH information</a></li>
+                <li><a href="#">Data Protection Consent Statement </a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>SWAROVSKI</p>
+        <p1>Other Countries / Region | en</p1><br><br><br><br>
+        
+        Copyright © 2024 Swarovski Other Countries /<br> Regions. All rights reserved.<br><br>
+        SWAROVSKI and the SWAN logo 
+        are registered and<br> trademarks
+        of Swarovski AG.
+        
+    </div>
+</footer>
 
 </body>
 </html>
